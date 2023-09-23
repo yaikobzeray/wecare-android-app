@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".SignupPage">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="215dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/humaniterian"
+        android:contentDescription="@string/logo" />
+
+    <TextView
+        android:id="@+id/CreateanAccount"
+        android:layout_width="216dp"
+        android:layout_height="42dp"
+
+        android:layout_alignTop="@+id/logo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="300dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColorHint="#2196F3"
+        android:text="@string/create_an_account"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/fullnameField"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="342dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="573dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        android:lineSpacingExtra="8sp"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        android:textColorHint="#009694"
+
+        android:textSize="16sp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/emailField"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="401dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="573dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:lineSpacingExtra="8sp"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        android:textColorHint="#009694"
+
+        android:textSize="16sp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/passwordfield"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="457dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="573dp"
+        android:background="@drawable/edittextborder"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:lineSpacingExtra="8sp"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        android:textColorHint="#009694"
+
+        android:textSize="16sp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/confirmpassfield"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="512dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="573dp"
+        android:background="@drawable/edittextborder"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:lineSpacingExtra="8sp"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        android:textColorHint="#009694"
+
+        android:textSize="16sp" />
+
+
+    <CheckBox
+        android:id="@+id/checkbox_condition"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="555dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="683dp"
+        android:buttonTint="@color/blue" />
+
+    <TextView
+        android:id="@+id/conditionText"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginTop="571dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="712dp"
+        android:text="@string/i_have_read_terms_and_condtions"
+        android:textColor="#B02196F3" />
+
+    <Button
+        android:id="@+id/signUpbutton"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="636dp"
+
+        android:layout_marginEnd="53dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/Signup"
+        android:textColor="@android:color/white"
+        app:cornerRadius="5dp" />
+
+
+</RelativeLayout>

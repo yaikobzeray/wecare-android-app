@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">wecare</string>
+    <string name="i_have_read_terms_and_condtions">I have read Terms and Condtions</string>
+    <string name="signup">SignUp</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="logo">logo</string>
+    <string name="Signup">Signup</string>
 </resources>
