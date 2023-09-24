@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#0FFFFFFF"
+    android:textAlignment="center"
+    tools:context=".MeetDevelopers">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/backbtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:backgroundTint="#FFFFFF"
+                    android:src="@drawable/baseline_arrow_back_24" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Meet the Developers"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/solomon" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="solomon sitotaw"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Sgmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Sgit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Slin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/yorda"
+                            app:srcCompat="@drawable/yorda" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yordanos Tibebu"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Ytgmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Ytgit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Ytlin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/solomon" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yakob Zeray"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Yzgmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Yzgit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Yzlin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/solomon" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Biruk Getachew"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Bggmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Bggit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Bglin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/solomon" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yoseph Tesfaye"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Yosgmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Yosgit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Yoslin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#D5E4FB"
+                    app:cardBackgroundColor="#D5E4FB"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/solomon" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Yordanos Bogale"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="full stack developer"
+                            android:textAlignment="center" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/Ybgmail"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/gmail" />
+
+                            <ImageButton
+                                android:id="@+id/Ybgit"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/github" />
+
+                            <ImageButton
+                                android:id="@+id/Yblin"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#D5E4FB"
+                                android:padding="4dp"
+                                android:src="@drawable/linked" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
