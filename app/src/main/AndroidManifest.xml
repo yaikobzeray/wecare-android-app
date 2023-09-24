@@ -13,7 +13,13 @@
         android:theme="@style/Theme.Wecare"
         tools:targetApi="31">
         <activity
+            android:name=".followpage"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeetDevelopers"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

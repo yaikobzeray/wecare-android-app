@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/person_2/baseline_person_2_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/arrow_back/baseline_arrow_back_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="0089fd" />
-                            <entry key="outputName" value="baseline_person_2_24" />
+                            <entry key="color" value="6db5fd" />
+                            <entry key="outputName" value="baseline_arrow_back_24" />
                             <entry key="sourceFile" value="C:\Users\Meaza\Desktop\New folder\wecare-android-app" />
                           </map>
                         </option>
