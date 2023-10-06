@@ -15,6 +15,7 @@
         android:theme="@style/Theme.Wecare"
         tools:targetApi="31">
         <activity
+
             android:name=".CreatePost"
             android:exported="false" />
         <activity
@@ -24,10 +25,13 @@
             android:name=".FollowingActivity"
             android:exported="false" />
         <activity
-            android:name=".UserProfileActivity"
-            android:exported="false" />
+            android:name=".UserProfileActivity"/>
+
         <activity
             android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeetDevelopers"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

@@ -33,8 +33,13 @@
                         </option>
                         <option name="values">
                           <map>
+<<<<<<< HEAD
                             <entry key="color" value="008cff" />
                             <entry key="outputName" value="arrow_back" />
+=======
+                            <entry key="color" value="6db5fd" />
+                            <entry key="outputName" value="baseline_arrow_back_24" />
+>>>>>>> 01699959e740459b70fab614b17132c3f608e34e
                             <entry key="sourceFile" value="C:\Users\Meaza\Desktop\New folder\wecare-android-app" />
                           </map>
                         </option>
