@@ -15,7 +15,13 @@ public class MainActivity extends AppCompatActivity {
    }
 
     public void clickme(View view) {
-        Intent start = new Intent(this, UserProfileActivity.class);
+//        Intent start = new Intent(this, UserProfileActivity.class);
+//        startActivity(start);
+
+//        Intent start = new Intent(this, SubscribedNgoListActivity.class);
+//        startActivity(start);
+
+        Intent start = new Intent(this, CreatePost.class);
         startActivity(start);
     }
 }

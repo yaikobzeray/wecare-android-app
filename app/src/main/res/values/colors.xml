@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_blue">#BCE0FD</color>
+    <color name="light_blue_2">#E9F5FF</color>
     <color name="switch_light_blue">#DEF0FF</color>
     <color name="blue">#2196F3</color>
 </resources>

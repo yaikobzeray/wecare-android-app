@@ -234,6 +234,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider"
                 android:elevation="0dp"
+                app:cardElevation="0dp"
                 tools:ignore="MissingConstraints">
 
 
@@ -271,6 +272,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
+                app:cardElevation="0dp"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -317,6 +319,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView4"
+                app:cardElevation="0dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
