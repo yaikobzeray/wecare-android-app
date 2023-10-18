@@ -1,7 +1,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Wecare" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_blue_2</item>
+        <item name="android:textColor">@color/switch_light_blue</item>
+        <item name="android:background">@color/black</item>
+
     </style>
+    <!-- Dark mode -->
+    <!-- Screen background if light mode on -->
+    <style name="SCREEN">
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- Texts background if light mode on -->
+    <style name="TEXT">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- button background if light mode on -->
+    <style name="BUTTON">
+        <item name="android:background">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
+
+
+    </style>
+    <style name="Theme.WecareNight" parent="Base.Theme.Wecare" />
 </resources>

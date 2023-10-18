@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserProfileFragment"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="155dp"
+                android:layout_height="164dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/person"
+                app:civ_border_color="@color/light_blue"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.22" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/icon_holder"
+                android:layout_width="37dp"
+                android:layout_height="34dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:outlineSpotShadowColor="@color/black"
+                android:src="#ffffff"
+                app:civ_border_color="#1B000000"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="@+id/profile_image"
+                app:layout_constraintVertical_bias="0.861" />
+
+            <ImageButton
+                android:id="@+id/editIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/profile_image"
+                android:backgroundTint="#00000000"
+                android:foregroundTint="@color/blue"
+                android:outlineAmbientShadowColor="@color/black"
+
+
+                app:layout_constraintBottom_toBottomOf="@+id/icon_holder"
+                app:layout_constraintEnd_toEndOf="@+id/icon_holder"
+                app:layout_constraintStart_toStartOf="@+id/icon_holder"
+                app:layout_constraintTop_toTopOf="@+id/icon_holder"
+                app:srcCompat="@drawable/edit" />
+
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="52dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                tools:ignore="MissingConstraints">
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/person" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/blue"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+
+                android:layout_height="43dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayout"
+                tools:ignore="MissingConstraints">
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/pass" />
+
+                <TextView
+                    android:id="@+id/passName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Password"
+                    android:textColor="@color/blue"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/passTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="textPassword"
+                    android:text="000000"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                     />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+
+                android:layout_height="43dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                tools:ignore="MissingConstraints">
+
+
+                <ImageView
+                    android:id="@+id/bioIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:src="@drawable/info" />
+
+                <TextView
+                    android:id="@+id/bioName"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2.5"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"
+                    android:textColor="@color/blue"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/bioTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:textAlignment="textStart"
+                    android:textColor="@color/blue"
+                    android:textStyle="italic"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/light_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                android:elevation="0dp"
+                app:cardElevation="0dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/nightModeTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Night Mode"
+                        android:textColor="@color/white"
+
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <Switch
+                        android:id="@+id/NightModeSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:thumbTint="@color/white"
+                        android:trackTint="@color/blue" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/light_blue"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                android:elevation="0dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:paddingVertical="10dp">
+
+                    <TextView
+                        android:id="@+id/notificationSwith"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0.75"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Logout"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <Button
+                        android:id="@+id/logout"
+                        android:layout_width="50dp"
+                        android:layout_weight="0.05"
+                        android:layout_height="wrap_content"
+
+
+                        android:backgroundTint="@color/light_blue"
+                        android:drawableLeft="@drawable/logout" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                app:cardElevation="0dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/light_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                android:elevation="0dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/meetDev"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="Meet The Developers"
+                        android:textColor="@color/white"
+
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <Button
+                        android:id="@+id/goMeetBtn"
+                        android:layout_width="50dp"
+                        android:layout_weight="0.3"
+                        android:layout_height="wrap_content"
+
+
+                        android:backgroundTint="@color/light_blue"
+                        android:drawableLeft="@drawable/to_right_icon" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginTop="20dp"
+
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_marginTop="28dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/divider1"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/versionName"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.75"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Version"
+                    android:textColor="@color/blue"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/versionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:text="V 1.00"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="DuplicateIds" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+

@@ -2,19 +2,25 @@ package com.example.wecare;
 
 public class Company {
     String name;
+    String imgUrl;
     String subscribers;
     boolean isVerified;
     boolean isSubscribed;
 
-    public Company(String name, String subscribers, boolean isVerified, boolean isSubscribed) {
-        this.name = name;
-        this.subscribers = subscribers;
-        this.isVerified = isVerified;
-        this.isSubscribed = isSubscribed;
+    public Company() {
+
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public String getSubscribers() {

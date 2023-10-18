@@ -14,6 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.google.firebase.database.DatabaseReference;
+
 public class EditDialogBox  extends AppCompatDialogFragment {
     private String title;
     private String hintText;
@@ -25,6 +27,8 @@ public class EditDialogBox  extends AppCompatDialogFragment {
         this.hintText = hintText;
     }
     private EditText editText;
+
+
 
 
     @NonNull
@@ -49,6 +53,7 @@ public class EditDialogBox  extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                      String text = editText.getText().toString();
+
                      listener.applyText(text,title);
                     }
                 });

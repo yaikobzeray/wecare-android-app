@@ -2,12 +2,23 @@ package com.example.wecare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentResolver;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,6 +36,12 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
     Map<String,Object> postJson;
 
     Bitmap imageBitmap;
+    Uri imageUri;
+
+    ProgressBar progressBar;
+
+    private DatabaseReference root = FirebaseDatabase.getInstance().getReference("posts");
+    private StorageReference reference = FirebaseStorage.getInstance().getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +54,10 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
         postJson = new HashMap<>();
         postBtn = findViewById(R.id.button4);
 
+        progressBar = findViewById(R.id.uploadProgress);
+
+        progressBar.setVisibility(View.INVISIBLE);
+
 
         description = descriptionTxt.getText().toString();
 
@@ -46,12 +67,19 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
         });
 
         postBtn.setOnClickListener(view -> {
-            postJson.put("description",descriptionTxt.getText());
-            postJson.put("title",titleTxt.getText());
-            System.out.println(postJson);
+
+
+            if(imageUri != null){
+                uploadTofirebase(imageUri);
+            }else{
+                Toast.makeText(this, "please select image", Toast.LENGTH_SHORT).show();
+            }
+
 
         });
     }
+
+
 
     @Override
     public void getPhoto(Bitmap bitmapCamera, Uri uriGallery, int requestCode) {
@@ -64,8 +92,92 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
                 break;
             case 1:
                 imageView.setImageURI(uriGallery);
-
+                imageUri = uriGallery;
                 break;
         }
+
+    }
+
+    public void uploadTofirebase(Uri uri){
+        StorageReference fileRef = reference.child(System.currentTimeMillis() + "." + getFileExstension(uri));
+        fileRef.putFile(uri).addOnSuccessListener(taskSnapshot -> {
+                            fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    Post post = new Post(uri.toString(),titleTxt.getText().toString(),descriptionTxt.getText().toString());
+                                    String postId = root.push().getKey();
+                                    root.child (postId). setValue(post);
+                                    titleTxt.setText(null);
+                                    descriptionTxt.setText(null);
+                                    imageView.setImageResource(R.drawable.person);
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    Toast.makeText(CreatePost.this, "Uploaded successfully", Toast.LENGTH_SHORT).show();
+                                    postBtn.setVisibility(View.VISIBLE);
+
+                                }
+                            });
+                })
+                            .addOnProgressListener(snapshot -> {
+                             progressBar.setVisibility(View.VISIBLE);
+                             postBtn.setVisibility(View.INVISIBLE);
+                            })
+                            .addOnFailureListener(e -> {
+                                progressBar.setVisibility(View.INVISIBLE);
+                                postBtn.setVisibility(View.VISIBLE);
+
+                                Toast.makeText(this, "unable to upload", Toast.LENGTH_SHORT).show();
+                            });
+
+    }
+
+    private String getFileExstension(Uri mUri){
+        ContentResolver cr = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        return mime.getExtensionFromMimeType(cr.getType(mUri));
+    }
+}
+
+
+
+class Post{
+    String imgUrl;
+    String title;
+    String description;
+
+
+
+
+
+    public Post(){}
+
+    public Post(String imgUrl,String title,String description){
+        this.imgUrl = imgUrl;
+        this.title = title;
+        this.description = description;
+
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
