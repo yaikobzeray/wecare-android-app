@@ -79,6 +79,32 @@ public class SignupPage extends AppCompatActivity {
         TextView textView = findViewById(R.id.conditionText);
 
 
+
+
+        TextView asCompany = findViewById(R.id.signupTextcompany);
+        SpannableString companySignupText  = new SpannableString((asCompany.getText()));
+        ClickableSpan companysingup = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View view) {
+                startActivity(new Intent(SignupPage.this, sgnupascompany.class));
+                finish(); // O
+            }
+        };
+        companySignupText.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), 31, 36, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        companySignupText.setSpan(companysingup,31, 35, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        asCompany.setText(companySignupText);
+        asCompany.setMovementMethod(LinkMovementMethod.getInstance());
+
+
+
+
+
+
+
+
+
+
+
         loginText = findViewById(R.id.loginText);
         // Make "Login" clickable
         SpannableString spannableString = new SpannableString(loginText.getText());
@@ -92,6 +118,9 @@ public class SignupPage extends AppCompatActivity {
 
 
         };
+
+
+
 
         spannableString.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), 17, 22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         spannableString.setSpan(clickableSpan,17, 22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
