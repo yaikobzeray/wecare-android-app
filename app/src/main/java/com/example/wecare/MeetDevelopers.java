@@ -90,7 +90,7 @@ public class MeetDevelopers extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent i =new Intent(Intent.ACTION_SENDTO);
                             i.setData(Uri.parse("mailto:"));
-                            i.putExtra(Intent.EXTRA_EMAIL, new String[]{"solotest922@gmail.com"});
+                            i.putExtra(Intent.EXTRA_EMAIL, new String[]{"Yordanostibebu5@gmail.com"});
                             startActivity(i);
                         }
                     });
@@ -117,7 +117,7 @@ public class MeetDevelopers extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             // Define the GitHub URL
-                            String githubUrl = "https://github.com/Yordaaa";
+                            String githubUrl = "https://github.com/jacze-dev/jacze-dev";
 
                             // Create an Intent to open a web browser
                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
@@ -127,14 +127,14 @@ public class MeetDevelopers extends AppCompatActivity {
                         }
                     });
 
-                    ImageButton gmailButton3 = findViewById(R.id.Ytgmail);
+                    ImageButton gmailButton3 = findViewById(R.id.Yzgmail);
                     gmailButton3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
 
                             Intent intent = new Intent(Intent.ACTION_SENDTO);
                             intent.setData(Uri.parse("mailto:"));
-                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"solotest922@gmail.com"});
+                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"yaikobzeray@gmail.com"});
                             startActivity(intent);
                         }
                     });
@@ -144,7 +144,7 @@ public class MeetDevelopers extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             // Define the GitHub URL
-                            String linkedinUrl = "https://www.linkedin.com/in/yordanos-tibebu-981bb7290/";
+                            String linkedinUrl = "https://www.linkedin.com/in/yaikob-zeray";
 
                             // Create an Intent to open a web browser
                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl));
@@ -161,7 +161,7 @@ public class MeetDevelopers extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             // Define the GitHub URL
-                            String githubUrl = "https://github.com/Yordaaa";
+                            String githubUrl = "https://github.com/Barok-Getachew";
 
                             // Create an Intent to open a web browser
                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
@@ -178,7 +178,7 @@ public class MeetDevelopers extends AppCompatActivity {
 
                             Intent intent = new Intent(Intent.ACTION_SENDTO);
                             intent.setData(Uri.parse("mailto:"));
-                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"solotest922@gmail.com"});
+                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"bruk_getachew@yahoo.com"});
                             startActivity(intent);
                         }
                     });
@@ -188,7 +188,7 @@ public class MeetDevelopers extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             // Define the GitHub URL
-                            String linkedinUrl = "https://www.linkedin.com/in/yordanos-tibebu-981bb7290/";
+                            String linkedinUrl = "https://www.linkedin.com/in/birukgetachew/";
 
                             // Create an Intent to open a web browser
                             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl));
@@ -286,7 +286,50 @@ public class MeetDevelopers extends AppCompatActivity {
                         }
                     });
                 }
+            //marta t/michael
+                {
+                    ImageButton githubButton6 = findViewById(R.id.mgit);
+                    githubButton6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Define the GitHub URL
+                            String githubUrl = "https://github.com/shenahh1";
 
+                            // Create an Intent to open a web browser
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(githubUrl));
+
+                            // Start the activity to open the browser
+                            startActivity(intent);
+                        }
+                    });
+
+                    ImageButton gmailButton6 = findViewById(R.id.mgmail);
+                    gmailButton6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            Intent intent = new Intent(Intent.ACTION_SENDTO);
+                            intent.setData(Uri.parse("mailto:"));
+                            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"marthatesfa9226@gmail.com"});
+                            startActivity(intent);
+                        }
+                    });
+
+                    ImageButton linkedinButton6 = findViewById(R.id.mlin);
+                    linkedinButton6.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // Define the GitHub URL
+                            String linkedinUrl = "https://et.linkedin.com/in/martha-tesfamichael-2ab698296";
+
+                            // Create an Intent to open a web browser
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkedinUrl));
+
+                            // Start the activity to open the browser
+                            startActivity(intent);
+                        }
+                    });
+                }
             }
     }
 

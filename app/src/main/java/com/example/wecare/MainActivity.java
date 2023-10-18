@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(MainActivity.this, followpage.class);
+                i = new Intent(MainActivity.this, ProfileDescs.class);
                 startActivity(i);
                 finish();
             }
