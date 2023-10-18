@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -40,6 +41,8 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
 
     ProgressBar progressBar;
 
+    ImageButton backButton;
+
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference("posts");
     private StorageReference reference = FirebaseStorage.getInstance().getReference();
 
@@ -47,6 +50,7 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_post);
+        backButton = findViewById(R.id.button2);
         imageView = findViewById(R.id.imageView);
         selectPhotoBtn = findViewById(R.id.button3);
         titleTxt = findViewById(R.id.editTextText);
@@ -56,8 +60,9 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
 
         progressBar = findViewById(R.id.uploadProgress);
 
-        progressBar.setVisibility(View.INVISIBLE);
 
+
+        progressBar.setVisibility(View.INVISIBLE);
 
         description = descriptionTxt.getText().toString();
 
@@ -66,11 +71,19 @@ public class CreatePost extends AppCompatActivity implements  CameraAndGalleryCh
             cameraAndGalleryChooser.show(getSupportFragmentManager(),"choose");
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         postBtn.setOnClickListener(view -> {
 
 
             if(imageUri != null){
                 uploadTofirebase(imageUri);
+                finish();
             }else{
                 Toast.makeText(this, "please select image", Toast.LENGTH_SHORT).show();
             }

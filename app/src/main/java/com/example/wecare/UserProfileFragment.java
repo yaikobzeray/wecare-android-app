@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -93,6 +94,8 @@ public class UserProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                log out functions
+
+
             }
         });
 
