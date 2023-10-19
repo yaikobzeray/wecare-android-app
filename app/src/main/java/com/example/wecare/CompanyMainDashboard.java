@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ public class CompanyMainDashboard extends AppCompatActivity  implements  EditDia
         final int home = R.id.home;
         final int subscribe = R.id.subscribe;
         final int setting = R.id.setting;
+        final int add = R.id.favourite;
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
@@ -55,9 +57,14 @@ public class CompanyMainDashboard extends AppCompatActivity  implements  EditDia
             } else if (item.getItemId() == setting) {
                 replaceFragment(new UserProfileFragment());
                 return true;
+            } else if (item.getItemId() == add) {
+
+                Intent intent = new Intent(getApplicationContext(), CreatePost.class);
+                startActivity(intent);
             } else {
                 return false;
             }
+            return  false;
         });
 
 

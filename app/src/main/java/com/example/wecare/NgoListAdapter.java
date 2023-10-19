@@ -58,7 +58,13 @@ public class NgoListAdapter extends RecyclerView.Adapter<NgoListAdapter.MyViewHo
         });
 
         holder.cdView.setOnClickListener(view -> {
-            Intent intent = new Intent(context,ProfileDescs.class);
+            Intent intent = new Intent(context, ProfileDescs.class);
+            // Pass any data you need to the ProfileDescs activity using intent extras
+            intent.putExtra("companyName", company.name);
+            intent.putExtra("imageUrl", company.getImgUrl());
+            intent.putExtra("subscribers", company.subscribers);
+            intent.putExtra("isVerified", company.isVerified);
+            context.startActivity(intent);
         });
 
 
