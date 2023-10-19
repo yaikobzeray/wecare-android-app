@@ -95,7 +95,6 @@ public class UserProfileFragment extends Fragment {
             public void onClick(View view) {
 //                log out functions
 
-
             }
         });
 
