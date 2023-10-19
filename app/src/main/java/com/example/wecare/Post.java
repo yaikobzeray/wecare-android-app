@@ -9,6 +9,9 @@ public class Post {
 
     }
 
+    public Post(String toString, String toString1, String toString2) {
+    }
+
     public String  getImageUrl() {
         return imageUrl;
     }

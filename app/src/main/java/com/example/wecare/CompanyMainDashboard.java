@@ -5,15 +5,24 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.wecare.databinding.ActivityCompanyMainDashboardBinding;
 import com.example.wecare.databinding.ActivityMainBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class CompanyMainDashboard extends AppCompatActivity {
+
+public class CompanyMainDashboard extends AppCompatActivity  implements  EditDialogBox.EditDialogListener, CameraAndGalleryChooser.CameraAndGalleryListener{
 
 
     private ActivityCompanyMainDashboardBinding binding;
+
+    UserProfileFragment userProfileFragment;
+
+    private DatabaseReference user = FirebaseDatabase.getInstance().getReference("users").child("JpuVHMbkzFcX67MFmUkRukX9sSd2");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +50,10 @@ public class CompanyMainDashboard extends AppCompatActivity {
                 replaceFragment(new FirstFragment());
                 return true;
             } else if (item.getItemId() == subscribe) {
-                replaceFragment(new SecondFragment());
+                replaceFragment(new SubscribedNgoListFragment());
                 return true;
             } else if (item.getItemId() == setting) {
-                replaceFragment(new ThirdFragment());
+                replaceFragment(new UserProfileFragment());
                 return true;
             } else {
                 return false;
@@ -60,4 +69,24 @@ public class CompanyMainDashboard extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
     }
+
+    @Override
+    public void getPhoto(Bitmap bitmapCamera, Uri uriGallery, int requestCode) {
+        userProfileFragment.setImage(bitmapCamera,uriGallery,requestCode);
     }
+
+    @Override
+    public void applyText(String text, String inputType) {
+        if (!text.isEmpty()) {
+            if (inputType.equals("Edit Name")) {
+                user.child("name").setValue(text);
+            }
+            if (inputType.equals("Change Password")) {
+//                pass.setText(text);
+            }
+        }
+        if (inputType.equals("Edit Bio")) {
+            user.child("bio").setValue(text);
+        }
+    }
+}

@@ -203,6 +203,8 @@ public class SignupPage extends AppCompatActivity {
                                                 String profileImageUrl = ""; // Get the profile image URL
                                                 String emailAdress= email;
                                                 boolean isVerified = user.isEmailVerified();
+                                                Intent intent = new Intent(SignupPage.this, CompanyMainDashboard.class);
+                                                startActivity(intent);
 
                                                 storeUserDetailsInDatabase(userID, userName,emailAdress ,profileImageUrl, isVerified);
                                             }
@@ -222,6 +224,10 @@ public class SignupPage extends AppCompatActivity {
 
                         Toast.makeText(this, "Checkbox is checked!", Toast.LENGTH_SHORT).show();
                     }
+
+
+
+
 
 
                 });
